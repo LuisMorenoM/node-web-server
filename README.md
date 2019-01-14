@@ -1,10 +1,16 @@
 # Node + Express + Handlebars + Gulp + Sass web server
 
-## Usage
+## Installation
+```
+npm install
 
-- Clone repo
--  > node server.js
--  > gulp watch
+```
+
+## Usage
+```
+noder server.js
+gulp watch
+```
 
 ## Using
 - [Node](https://nodejs.org)
