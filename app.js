@@ -2,23 +2,28 @@ const express 	= require('express')
 const exphbs 	= require('express-handlebars')
 const app 		= express()
 
-//lo puedo poner con html -> handlebars. Pero los archivos tendrian que ser .handlebars. Entonces a la hora de pasar el archivo mal
-app.engine('html', exphbs({defaultLayout:'base'}))
+// creating a instance
+let hbs = exphbs.create({
+	defaultLayout:'base',
+	extname: '.html'
+})
+// changing the engine to .html
+app.engine('html', hbs.engine);
 app.set('view engine', 'html')
 
+app.use(express.static(__dirname + '/public'))
 
 //*--- ROUTES ---*
+
 //normal with layout
 app.get('/', function(req, res, next) {  
-    res.render('hola', {name:'luis'})
+    res.render('home', {name:'Ricky'})
 })
 
 // a lading page without layout
 app.get('/html', function(req, res, next) {  
-    res.render('landingSinLayout', {layout:false})
+    res.render('nolayout', {layout:false})
 })
-
-// app.use('/', express.static('views'))
 //*--- END ROUTES ---*
 
 
