@@ -13,9 +13,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/kyra-studio/lading-base/issues"
+    "url": "https://github.com/LuisMorenoM/node-web-server/issues"
   },
-  "homepage": "https://gitlab.com/kyra-studio/lading-base#readme",
+  "homepage": "https://github.com/LuisMorenoM/node-web-server/",
   "dependencies": {
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0"
